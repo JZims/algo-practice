@@ -262,4 +262,6 @@ function textEditor1_2(queries) {
 //Append - add given text to the index of the provided cursor
   // move cursor position to the end of the new string
 //Move  - Move cursor to the position specified according to the nearest space between words
-//Backspace - Delete first character before the cursor's current position
+//Backspace - Delete first character before the cursor's current position'
+
+
