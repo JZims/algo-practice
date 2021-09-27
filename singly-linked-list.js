@@ -166,24 +166,70 @@
         if(index === 0) return !!this.shift()
         //otherwise, using the get method, access the node at the index of -1
         let foundNode = this.get(index - 1)
-        let removedNode 
+        
         //set the next property on that node to be the next of the next node
-        removedNode = foundNode.next
-        foundNode = foundNode.next.next
+        let removedNode  = foundNode.next
+        foundNode.next = removedNode.next
         //decrement the length
         this.length--
         //return the value of the removed node
+        console.log(removedNode, foundNode)
         return removedNode
     }
+
+    print(){
+        let arr = []
+        let current = this.head
+        while(current){
+            arr.push(current.val)
+            current = current.next
+        }
+        console.log(arr)
+    }
+
+    reverse(){
+        //reversing in place
+        //Swap the head and the tail
+        let node = this.head
+        this.head = this.tail
+        this.tail = node
+        //Create a variable called next
+        let next = null
+        //another called previous(should be null so tail knows when to stop)
+        let previous = null
+        
+        //loop through the list
+        for(var i = 0; i < this.length; i++){
+             //set next to be the next property of node
+            next = node.next
+            //set the next property of the node to be whatever previous is
+            node.next = previous
+            //set previous to be the value of the node variable
+            previous = node
+             //set the node variable to be the value of the next variable
+            node = next
+        }
+       //return the reversed list
+        this.print()
+        return this
+
+    }   
+
+
         
   }
    
 
 
   let list = new SinglyLinked()
+
     list.push("HELLO")
     list.push("GOODBYE")
     list.push("AHHHHHH")
     list.unshift("Whoa!")
     list.get(1)
-    console.log(list)
+    list.print()
+    list.reverse()
+
+   
+    
