@@ -1,4 +1,5 @@
-//Function takes in a sorted array and asks to print the number of unique values inside the array
+//Function takes in a sorted array and asks to print the number of unique 
+//values inside the array
 
 
 
