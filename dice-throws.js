@@ -4,7 +4,7 @@ function diceThrows(numDice, numSides, target) {
       .map(_ => new Array(target +1).fill(0))
     storedResults[0][0] = 1;
   
-    for(let currentNumDice = 1; curentNumDice < numDice +1; currentNumDice++) {
+    for(let currentNumDice = 1; currentNumDice < numDice +1; currentNumDice++) {
       for (let currentTarget = 0; currentTarget < target +1; currentTarget++){
         let numWaysToReachTarget = 0;
         for (
