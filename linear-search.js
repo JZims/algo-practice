@@ -7,5 +7,3 @@ function linearSearch(arr, value){
     } 
  return - 1
 }
-
-linearSearch([4, 10, 88, 41, 19, 20],89)
