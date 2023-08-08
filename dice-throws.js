@@ -21,5 +21,3 @@ function diceThrows(numDice, numSides, target) {
     return storedResults[numDice][target];
   }
   
-  // Do not edit the line below.
-  exports.diceThrows = diceThrows;
